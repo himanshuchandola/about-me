@@ -1,63 +1,92 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <!-- init -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- scripts -->
-  <script src="https://kit.fontawesome.com/7cf1aca7fb.js" crossorigin="anonymous"></script><link rel="stylesheet" href="./style.css">
-
+  <title>Himanshu Chandola</title>
+  
+  <!-- Resource hints for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://kit.fontawesome.com">
+  
+  <!-- Critical CSS inlined -->
+  <style>
+    body{margin:0;padding:0;background-color:#131415;font-family:"Roboto",sans-serif;transition:3s ease}
+    .nav{position:fixed;z-index:14;background:#131415;width:100%;max-height:72px}
+    .header{line-height:36px;display:flex;color:#e1e1e1;align-items:center;justify-content:space-between}
+    .main{color:#e1e1e1;width:100%;display:flex;justify-content:center;padding-bottom:100px}
+  </style>
+  
+  <!-- Non-critical CSS -->
+  <link rel="stylesheet" href="./style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="./style.css"></noscript>
+  
+  <!-- Google Fonts with display swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="full" id="rainbow" class=""><div class="rainbow"></div></div>
+<div class="full" id="rainbow"><div class="rainbow"></div></div>
 <div class="nav big" id="nav">
   <div class="header big" id="header">
     <div class="name"><span>Himanshu Chandola</span>
-      <div class="tag-line">Open Source is <i class="fa fa-heart" aria-hidden="true"></i> </div>
+      <div class="tag-line">Open Source is <span class="heart" aria-label="love">♥</span></div>
     </div>
     <ul class="menu">
-      <li><a href="https://twitter.com/himanshuistaken" target="_blank"><i class="fab fa-twitter"></i><span class="extra">Twitter</span></a></li>
-      <li><a href="https://github.com/himanshuchandola" target="_blank"><i class="fab fa-github"></i><span class="extra">GitHub</span></a></li>
-      <li><a href="mailto:himanshuchandola@protonmail.com" target="_blank"><i class="fas fa-envelope"></i><span class="extra">Email</span>
-        </a></li>
-		</ul>
+      <li><a href="https://twitter.com/himanshuistaken" target="_blank" rel="noopener"><span class="icon-twitter" aria-hidden="true">🐦</span><span class="extra">Twitter</span></a></li>
+      <li><a href="https://github.com/himanshuchandola" target="_blank" rel="noopener"><span class="icon-github" aria-hidden="true">⚡</span><span class="extra">GitHub</span></a></li>
+      <li><a href="mailto:himanshuchandola@protonmail.com" target="_blank"><span class="icon-email" aria-hidden="true">✉</span><span class="extra">Email</span></a></li>
+    </ul>
   </div>
   <div class="more" id="more">
     <div class="text">Scroll down</div>
-    <i class="icon fas fa-angle-down"></i>
+    <span class="icon angle-down" aria-hidden="true">↓</span>
   </div>
 </div>
 <div class="main" id="main">
-      <div class="body">
-        <div class="card">
-          <div class="content">
-            <h1>More info about me</h1>
-            <p>My name is Himanshu Chandola, i am Python Coder. I know how to manipulate GIT, python, Node.JS)</p>
-          </div>
+  <div class="body">
+    <div class="card">
+      <div class="content">
+        <h1>More info about me</h1>
+        <p>My name is Himanshu Chandola, i am Python Coder. I know how to manipulate GIT, python, Node.JS)</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h1>My projects!</h1>
+        <div>
+          <h3>Virtual Assistant Python</h3>
+          <p>A Simple Virtual Assistant Created using Python.</p>
+          <a class="btn" href="https://github.com/himanshuchandola/Virtual_Assistant_Python" rel="noopener"><span class="icon-github" aria-hidden="true">⚡</span> GitHub</a>
         </div>
-        <div class="card">
-          <div class="content">
-            <h1>My projects!</h1>
-            <div>
-              <h3>Virtual Assistant Python</h3>
-              <p>A Simple Virtual Assistant Created using Python.</p>
-            <a class="btn" href="https://github.com/himanshuchandola/Virtual_Assistant_Python"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-            <div>
-              <h3>Website Auth System</h3>
-              <p>Simple Website Auth System uses MongoDB as Database and Heroku for Application Hosting</p>
-			  <a class="btn" href="https://github.com/himanshuchandola/Website-Auth-System"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="content">
-            <h1>Contact</h1>
-            <p>If you wanna contact me for whatever reason feel free to shoot me an email <a href="mailto:himanshuchandola@protonmail.com">himanshuchandola@protonmail.com</a>.</p>
-          </div>
+        <div>
+          <h3>Website Auth System</h3>
+          <p>Simple Website Auth System uses MongoDB as Database and Heroku for Application Hosting</p>
+          <a class="btn" href="https://github.com/himanshuchandola/Website-Auth-System" rel="noopener"><span class="icon-github" aria-hidden="true">⚡</span> GitHub</a>
         </div>
       </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h1>Contact</h1>
+        <p>If you wanna contact me for whatever reason feel free to shoot me an email <a href="mailto:himanshuchandola@protonmail.com">himanshuchandola@protonmail.com</a>.</p>
+      </div>
+    </div>
+  </div>
 </div>
-  <script  src="./script.js"></script>
+
+<!-- Load FontAwesome asynchronously as fallback -->
+<script>
+  // Load FontAwesome only if emojis aren't supported
+  if (!('👍'.length === 2)) {
+    const fa = document.createElement('script');
+    fa.src = 'https://kit.fontawesome.com/7cf1aca7fb.js';
+    fa.crossOrigin = 'anonymous';
+    fa.async = true;
+    document.head.appendChild(fa);
+  }
+</script>
+
+<script src="./script.js" defer></script>
 </body>
 </html>
